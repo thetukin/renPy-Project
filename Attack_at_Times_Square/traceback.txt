@@ -1,0 +1,36 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 31, in script
+    play music "<loop >song.mp3"
+  File "renpy/common/000statements.rpy", line 125, in execute_play_music
+    if_changed=p.get("if_changed", False))
+Exception: Parsing audio spec u'<loop >song.mp3': expected float at end..
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 31, in script
+    play music "<loop >song.mp3"
+  File "D:\Downloads\renpy-7.0.0-sdk\renpy\ast.py", line 1828, in execute
+    self.call("execute")
+  File "D:\Downloads\renpy-7.0.0-sdk\renpy\ast.py", line 1816, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "D:\Downloads\renpy-7.0.0-sdk\renpy\statements.py", line 177, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 125, in execute_play_music
+    if_changed=p.get("if_changed", False))
+  File "D:\Downloads\renpy-7.0.0-sdk\renpy\audio\music.py", line 112, in play
+    c.enqueue(filenames, loop=loop, synchro_start=synchro_start, fadein=fadein, tight=tight, loop_only=loop_only)
+  File "D:\Downloads\renpy-7.0.0-sdk\renpy\audio\audio.py", line 534, in enqueue
+    filename, _, _ = self.split_filename(filename, False)
+  File "D:\Downloads\renpy-7.0.0-sdk\renpy\audio\audio.py", line 316, in split_filename
+    loop = expect_float()
+  File "D:\Downloads\renpy-7.0.0-sdk\renpy\audio\audio.py", line 286, in expect_float
+    raise exception("expected float at end.")
+Exception: Parsing audio spec u'<loop >song.mp3': expected float at end..
+
+Windows-8-6.2.9200
+Ren'Py 7.0.0.196
+Test 1.0
+Sat Jul 28 19:52:20 2018
