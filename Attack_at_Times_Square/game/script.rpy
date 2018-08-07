@@ -20,7 +20,7 @@ image bg t = im.Scale("times_square.jpg",1980,1100)
 image bg t2 = im.Scale("time_square2.jpg",1980,1100)
 image bg b = im.Scale("beach.png",1980,1100)
 image bg end = im.Scale("endScreen.png",1980,1100)
-define e = Character("Jessy")
+define e = Character("Jessica")
 define user = Character("[povname]")
 
 # The game starts here.
